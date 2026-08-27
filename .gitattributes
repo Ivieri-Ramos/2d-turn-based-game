@@ -18,3 +18,5 @@
 
 *.ttf binary
 *.otf binary
+
+addons/** linguist-vendored
