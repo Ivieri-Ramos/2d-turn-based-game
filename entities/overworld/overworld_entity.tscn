@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://2spevtkkfb85"]
+
+[ext_resource type="Script" uid="uid://biocopkpqhqjk" path="res://entities/overworld/overworld_entity.gd" id="1_w080f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jm4vq"]
+size = Vector2(32, 32)
+
+[node name="OverworldEntity" type="Area2D" unique_id=1679493519]
+script = ExtResource("1_w080f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=961837450]
+shape = SubResource("RectangleShape2D_jm4vq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1463598789]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1751302042]
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1992704830]
+target_position = Vector2(0, 32)
