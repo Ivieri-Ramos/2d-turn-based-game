@@ -11,7 +11,11 @@ config_version=5
 [application]
 
 config/name="2d-turn-based-game"
+<<<<<<< HEAD
 run/main_scene="uid://cmslk6rt6pe5t"
+=======
+run/main_scene="uid://dsobm8h1dqxdv"
+>>>>>>> ab7342d (criacao dos mapas)
 config/features=PackedStringArray("4.7")
 config/icon="res://assets/icon.svg"
 
@@ -28,8 +32,13 @@ gdscript/warnings/unsafe_call_argument=1
 
 window/size/viewport_width=640
 window/size/viewport_height=352
+<<<<<<< HEAD
 window/size/window_width_override=1280
 window/size/window_height_override=704
+=======
+window/size/window_width_override=1920
+window/size/window_height_override=1056
+>>>>>>> ab7342d (criacao dos mapas)
 window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
 
