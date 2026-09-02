@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://blj02tohw6eh"]
+
+[ext_resource type="PackedScene" uid="uid://2spevtkkfb85" path="res://entities/overworld/overworld_entity.tscn" id="1_4bcsk"]
+[ext_resource type="Texture2D" uid="uid://cefm2noa2wr5w" path="res://entities/overworld/Enemies/Skeleton/Standing_Idle (32 x 32).png" id="2_k7n0e"]
+
+[sub_resource type="Animation" id="Animation_4hed6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [9]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_7f3w6"]
+resource_name = "idle"
+length = 1.08
+loop_mode = 2
+step = 0.12
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.12, 0.24, 0.36, 0.48, 0.6, 0.72, 0.84, 0.96, 1.08),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.50879765),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [9]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.50879765),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kja7m"]
+_data = {
+&"RESET": SubResource("Animation_4hed6"),
+&"idle": SubResource("Animation_7f3w6")
+}
+
+[node name="OverworldEntity" unique_id=1679493519 instance=ExtResource("1_4bcsk")]
+
+[node name="Sprite2D" parent="." index="1" unique_id=1463598789]
+texture = ExtResource("2_k7n0e")
+offset = Vector2(0, -16)
+hframes = 9
+
+[node name="AnimationPlayer" parent="." index="2" unique_id=1751302042]
+libraries/ = SubResource("AnimationLibrary_kja7m")
