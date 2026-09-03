@@ -23,9 +23,12 @@ func _on_idle_state_processing(_delta: float) -> void:
 		new_direction = GameEnums.Direction.DOWN
 
 	if try_move:
-		entity.direction = new_direction
-
-		entity.change_direction()
+		var turned_around: bool = (new_direction != entity.direction)
+		
+		if turned_around:
+			entity.change_direction(new_direction)
+			
+			entity.animation_player.play(GameConstants.ANIM_IDLE[new_direction])
 
 		if not entity.ray_cast.is_colliding():
 			entity.state_chart.send_event(&"start_move")

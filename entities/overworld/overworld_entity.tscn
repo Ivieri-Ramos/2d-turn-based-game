@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://2spevtkkfb85"]
 
-[ext_resource type="Script" uid="uid://biocopkpqhqjk" path="res://entities/overworld/overworld_entity.gd" id="1_w080f"]
+[ext_resource type="Script" uid="uid://huoyjhrlioc7" path="res://entities/overworld/overworld_entity.gd" id="1_w080f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jm4vq"]
 size = Vector2(32, 32)
