@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dqikwdjn3lvnr"]
+
+[ext_resource type="PackedScene" uid="uid://badujfh3p1orp" path="res://scenes/overworld/objects/base_object.tscn" id="1_grtvv"]
+[ext_resource type="Texture2D" uid="uid://b1sks46onck33" path="res://assets/cenarios/tileset/walls, floors/TX Props with Shadow.png" id="2_s2e1p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_804ts"]
+size = Vector2(32, 64)
+
+[node name="BaseObject" unique_id=240086847 instance=ExtResource("1_grtvv")]
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=263958606]
+shape = SubResource("RectangleShape2D_804ts")
+
+[node name="Sprite2D" parent="." index="1" unique_id=4157266]
+texture = ExtResource("2_s2e1p")
+offset = Vector2(0, -5)
+region_enabled = true
+region_rect = Rect2(384, 0, 36, 64)
