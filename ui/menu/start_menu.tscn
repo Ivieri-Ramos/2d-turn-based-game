@@ -1,17 +1,18 @@
 [gd_scene format=4 uid="uid://bg1qcjyt16skk"]
 
-[ext_resource type="Texture2D" uid="uid://c5cydxlx0ky4r" path="res://ui/Button_Blue_3Slides.png" id="1_3mak1"]
-[ext_resource type="Texture2D" uid="uid://dhynk7j4uqon" path="res://ui/Button_Blue_3Slides_Pressed.png" id="2_f3to4"]
-[ext_resource type="Texture2D" uid="uid://dwuetlr4nyo77" path="res://ui/Road4_grass.png" id="2_kee4l"]
-[ext_resource type="Texture2D" uid="uid://ckmknoqsp7inj" path="res://ui/Button_Hover_3Slides.png" id="3_4lqu0"]
-[ext_resource type="Texture2D" uid="uid://cq6voq53bbb74" path="res://ui/Road3.png" id="3_f7nu1"]
-[ext_resource type="FontFile" uid="uid://ccdyawilircxw" path="res://assets/fonts/alagard.ttf" id="4_dxcsy"]
-[ext_resource type="Texture2D" uid="uid://m2mje88lp7uv" path="res://ui/Button_Blue.png" id="5_i5e3i"]
-[ext_resource type="Texture2D" uid="uid://wdqnb6qbayol" path="res://ui/Button_Blue_Pressed.png" id="6_nlusd"]
-[ext_resource type="Texture2D" uid="uid://o5mhss6s23dv" path="res://ui/Button_Hover.png" id="7_epxgo"]
+[ext_resource type="Script" uid="uid://c1gxtr82bg6x5" path="res://ui/menu/start_menu.gd" id="1_t4xw7"]
+[ext_resource type="Texture2D" uid="uid://dwuetlr4nyo77" path="res://ui/Road4_grass.png" id="2_lj3xr"]
+[ext_resource type="Texture2D" uid="uid://cq6voq53bbb74" path="res://ui/Road3.png" id="3_6ib2r"]
+[ext_resource type="Texture2D" uid="uid://c5cydxlx0ky4r" path="res://ui/Button_Blue_3Slides.png" id="4_khqnu"]
+[ext_resource type="Texture2D" uid="uid://dhynk7j4uqon" path="res://ui/Button_Blue_3Slides_Pressed.png" id="5_h82uq"]
+[ext_resource type="Texture2D" uid="uid://ckmknoqsp7inj" path="res://ui/Button_Hover_3Slides.png" id="6_68p2t"]
+[ext_resource type="FontFile" uid="uid://ccdyawilircxw" path="res://assets/fonts/alagard.ttf" id="7_pjujl"]
+[ext_resource type="Texture2D" uid="uid://m2mje88lp7uv" path="res://ui/Button_Blue.png" id="8_am37q"]
+[ext_resource type="Texture2D" uid="uid://wdqnb6qbayol" path="res://ui/Button_Blue_Pressed.png" id="9_41uh4"]
+[ext_resource type="Texture2D" uid="uid://o5mhss6s23dv" path="res://ui/Button_Hover.png" id="10_3onyx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2bsxc"]
-texture = ExtResource("2_kee4l")
+texture = ExtResource("2_lj3xr")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -360,7 +361,7 @@ texture = ExtResource("2_kee4l")
 13:29/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jnge6"]
-texture = ExtResource("3_f7nu1")
+texture = ExtResource("3_6ib2r")
 1:1/0 = 0
 2:1/0 = 0
 3:1/0 = 0
@@ -564,13 +565,14 @@ texture = ExtResource("3_f7nu1")
 sources/0 = SubResource("TileSetAtlasSource_2bsxc")
 sources/1 = SubResource("TileSetAtlasSource_jnge6")
 
-[node name="MenuButtons" type="Control" unique_id=47791058]
+[node name="StartMenu" type="Control" unique_id=47791058]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_t4xw7")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=683868953]
 tile_map_data = PackedByteArray("AAANAAQAAAAGAAYAAAAMAAUAAAAAAAcAAAANAAUAAAABAAcAAAAMAAYAAAAAAAcAAAANAAYAAAABAAcAAAANAAcAAAABAAgAAAANAAgAAAABAAYAAAAMAAkAAAAAAAcAAAANAAkAAAABAAcAAAAMAAoAAAAAAAcAAAANAAoAAAABAAcAAAAQAA0AAAACAAkAAAAaAAoAAAADAAcAAAAbAAoAAAAEAAcAAAAaAAkAAAADAAcAAAAbAAkAAAAEAAcAAAAaAAgAAAAIAAYAAAAaAAcAAAAIAAgAAAAaAAYAAAADAAcAAAAbAAYAAAAEAAcAAAAaAAUAAAADAAcAAAAbAAUAAAAEAAcAAAAaAAQAAAAIAAYAAAAPAAwAAAACAAgAAAAPAA0AAAACAAkAAAAQAAwAAAACAAgAAAAXAAwAAAACAAgAAAAYAAwAAAACAAgAAAAYAA0AAAACAAkAAAARAAwAAAACAAgAAAAWAAwAAAACAAgAAAAOAAQAAAACAAYAAAAPAAQAAAACAAYAAAAQAAQAAAACAAYAAAARAAQAAAACAAYAAAAOAAUAAQAHAAcAAAAPAAUAAQAHAAcAAAAQAAUAAQAHAAcAAAAOAAYAAQAHAAcAAAAPAAYAAQAHAAcAAAAQAAYAAQAHAAcAAAAOAAcAAAADAAYAAAAPAAcAAQAHAAcAAAAQAAcAAQAHAAcAAAAOAAgAAAADAAgAAAAPAAgAAQAHAAcAAAAQAAgAAQAHAAcAAAAOAAkAAQAHAAcAAAAPAAkAAQAHAAcAAAAQAAkAAQAHAAcAAAAOAAoAAQAHAAcAAAAPAAoAAQAHAAcAAAAQAAoAAQAHAAcAAAAOAAsAAQAHAAcAAAAPAAsAAQAHAAcAAAAQAAsAAQAHAAcAAAASAAQAAAACAAYAAAATAAQAAAACAAYAAAAUAAQAAAACAAYAAAAVAAQAAAACAAYAAAAWAAQAAAACAAYAAAAXAAQAAAACAAYAAAAVAAUAAQAHAAcAAAAWAAUAAQAHAAcAAAAXAAUAAQAHAAcAAAAYAAQAAAACAAYAAAAZAAQAAAACAAYAAAAYAAUAAQAHAAcAAAAZAAUAAQAHAAcAAAAXAAYAAQAHAAcAAAAYAAYAAQAHAAcAAAAZAAYAAQAHAAcAAAAXAAcAAQAHAAcAAAAYAAcAAQAHAAcAAAAZAAcAAAABAAYAAAAXAAgAAQAHAAcAAAAYAAgAAQAHAAcAAAAZAAgAAAABAAgAAAAXAAkAAQAHAAcAAAAYAAkAAQAHAAcAAAAZAAkAAQAHAAcAAAAXAAoAAQAHAAcAAAAYAAoAAQAHAAcAAAAZAAoAAQAHAAcAAAAXAAsAAQAHAAcAAAAYAAsAAQAHAAcAAAAZAAsAAQAHAAcAAAASAAUAAQAHAAcAAAATAAUAAQAHAAcAAAAUAAUAAQAHAAcAAAASAAYAAQAHAAcAAAATAAYAAQAHAAcAAAAUAAYAAQAHAAcAAAASAAcAAQAHAAcAAAATAAcAAQAHAAcAAAAUAAcAAQAHAAcAAAASAAgAAQAHAAcAAAATAAgAAQAHAAcAAAAUAAgAAQAHAAcAAAASAAkAAQAHAAcAAAATAAkAAQAHAAcAAAAUAAkAAQAHAAcAAAASAAoAAQAHAAcAAAATAAoAAQAHAAcAAAAUAAoAAQAHAAcAAAASAAsAAQAHAAcAAAATAAsAAQAHAAcAAAAUAAsAAQAHAAcAAAASAAwAAAADAAYAAAATAAwAAQAHAAcAAAAUAAwAAQAHAAcAAAASAA0AAAABAAcAAAATAA0AAQAHAAcAAAAUAA0AAQAHAAcAAAASAA4AAAABAAcAAAATAA4AAQAHAAcAAAAUAA4AAQAHAAcAAAASAA8AAAABAAcAAAATAA8AAQAHAAcAAAAUAA8AAQAHAAcAAAASABAAAAABAAgAAAATABAAAQAHAAcAAAAUABAAAQAHAAcAAAAVAA8AAAADAAcAAAAVABAAAAADAAgAAAAVAA4AAAADAAcAAAAVAA0AAAADAAcAAAAVAAwAAAABAAYAAAAVAAsAAQAHAAcAAAAWAAsAAQAHAAcAAAAVAAoAAQAHAAcAAAAWAAoAAQAHAAcAAAAVAAkAAQAHAAcAAAAWAAkAAQAHAAcAAAAVAAgAAQAHAAcAAAAWAAgAAQAHAAcAAAAVAAcAAQAHAAcAAAAWAAcAAQAHAAcAAAAVAAYAAQAHAAcAAAAWAAYAAQAHAAcAAAARAAUAAQAHAAcAAAARAAYAAQAHAAcAAAARAAcAAQAHAAcAAAARAAgAAQAHAAcAAAARAAkAAQAHAAcAAAARAAoAAQAHAAcAAAARAAsAAQAHAAcAAAAZAA0AAAACAAkAAAAbAAsAAAAEAAcAAAAOAA0AAAACAAkAAAAMAAsAAAAAAAcAAAAOAAwAAAACAAgAAAANAAwAAAABAAgAAAANAAsAAAABAAcAAAAZAAwAAAACAAgAAAAaAAwAAAADAAgAAAAaAAsAAAADAAcAAAA=")
@@ -586,15 +588,16 @@ grow_vertical = 2
 alignment = 1
 
 [node name="NewGameButton" type="TextureButton" parent="VBoxContainer" unique_id=1045105040]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 size_flags_horizontal = 4
-texture_normal = ExtResource("1_3mak1")
-texture_pressed = ExtResource("2_f3to4")
-texture_hover = ExtResource("3_4lqu0")
+texture_normal = ExtResource("4_khqnu")
+texture_pressed = ExtResource("5_h82uq")
+texture_hover = ExtResource("6_68p2t")
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="VBoxContainer/NewGameButton" unique_id=1277283716]
+[node name="NewGameLabel" type="Label" parent="VBoxContainer/NewGameButton" unique_id=1277283716]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 1
 anchors_preset = 10
@@ -604,22 +607,23 @@ grow_horizontal = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.69411767)
 theme_override_constants/outline_size = 6
 theme_override_constants/shadow_outline_size = 12
-theme_override_fonts/font = ExtResource("4_dxcsy")
+theme_override_fonts/font = ExtResource("7_pjujl")
 theme_override_font_sizes/font_size = 20
 text = "Novo Jogo"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="AboutButton" type="TextureButton" parent="VBoxContainer" unique_id=241376034]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 size_flags_horizontal = 4
-texture_normal = ExtResource("1_3mak1")
-texture_pressed = ExtResource("2_f3to4")
-texture_hover = ExtResource("3_4lqu0")
+texture_normal = ExtResource("4_khqnu")
+texture_pressed = ExtResource("5_h82uq")
+texture_hover = ExtResource("6_68p2t")
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="VBoxContainer/AboutButton" unique_id=574326657]
+[node name="AboutLabel" type="Label" parent="VBoxContainer/AboutButton" unique_id=574326657]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 1
 anchors_preset = 10
@@ -629,29 +633,24 @@ grow_horizontal = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.69411767)
 theme_override_constants/outline_size = 6
 theme_override_constants/shadow_outline_size = 12
-theme_override_fonts/font = ExtResource("4_dxcsy")
+theme_override_fonts/font = ExtResource("7_pjujl")
 theme_override_font_sizes/font_size = 20
 text = "Sobre"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Spacer" type="Control" parent="VBoxContainer/AboutButton" unique_id=309240178]
-anchors_preset = 0
-offset_top = 142.0
-offset_right = 640.0
-offset_bottom = 142.0
-
 [node name="ExitButton" type="TextureButton" parent="VBoxContainer" unique_id=403837745]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture_normal = ExtResource("5_i5e3i")
-texture_pressed = ExtResource("6_nlusd")
-texture_hover = ExtResource("7_epxgo")
+texture_normal = ExtResource("8_am37q")
+texture_pressed = ExtResource("9_41uh4")
+texture_hover = ExtResource("10_3onyx")
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="VBoxContainer/ExitButton" unique_id=892926069]
+[node name="ExitLabel" type="Label" parent="VBoxContainer/ExitButton" unique_id=892926069]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 1
 anchors_preset = 10
@@ -662,12 +661,8 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.69411767)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 6
 theme_override_constants/shadow_outline_size = 12
-theme_override_fonts/font = ExtResource("4_dxcsy")
+theme_override_fonts/font = ExtResource("7_pjujl")
 theme_override_font_sizes/font_size = 14
 text = "Sair"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[connection signal="pressed" from="VBoxContainer/NewGameButton" to="." method="_on_new_game_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/AboutButton" to="." method="_on_about_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
