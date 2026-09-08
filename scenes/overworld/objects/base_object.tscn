@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://badujfh3p1orp"]
+
+[node name="BaseObject" type="StaticBody2D" unique_id=240086847]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=263958606]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=4157266]
+region_rect = Rect2(0, 0, 512, 512)

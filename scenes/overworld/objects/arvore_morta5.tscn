@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://beayv6bjmm5bq"]
+
+[ext_resource type="PackedScene" uid="uid://badujfh3p1orp" path="res://scenes/overworld/objects/base_object.tscn" id="1_ox6h0"]
+[ext_resource type="Texture2D" uid="uid://cvxhgbqb0limj" path="res://assets/cenarios/tileset/decorative_objects/cemetery.png" id="2_tk6bd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tk6bd"]
+size = Vector2(32, 32)
+
+[node name="BaseObject" unique_id=240086847 instance=ExtResource("1_ox6h0")]
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=263958606]
+shape = SubResource("RectangleShape2D_tk6bd")
+
+[node name="Sprite2D" parent="." index="1" unique_id=4157266]
+texture = ExtResource("2_tk6bd")
+offset = Vector2(-8, -32)
+region_enabled = true
+region_rect = Rect2(512, 384, 128, 128)
