@@ -504,6 +504,7 @@ _data = {
 }
 
 [node name="OverworldPlayer" unique_id=1679493519 node_paths=PackedStringArray("input_handler", "grid_movement", "idle_state", "move_state") instance=ExtResource("1_on8du")]
+collision_layer = 2
 script = ExtResource("2_x816k")
 input_handler = NodePath("Components/InputHandler")
 grid_movement = NodePath("Components/GridMovement")

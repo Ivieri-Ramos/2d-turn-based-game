@@ -1,4 +1,4 @@
-extends Area2D
+class_name TransitionZone extends Area2D
 
 enum TipoTransicao {
 	CONTIGUA,
@@ -21,6 +21,5 @@ func _ready() -> void:
 	
 
 func _ao_encostar_no_portal(area: Area2D) -> void:
-	# Verifica se quem bateu no portal foi o jogador
-	pass
+	print("bateu")
 	
