@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dt8gnmvdg8q6"]
 
 [ext_resource type="PackedScene" uid="uid://2spevtkkfb85" path="res://entities/overworld/overworld_entity.tscn" id="1_672vb"]
-[ext_resource type="Texture2D" uid="uid://4s23671rgqpk" path="res://entities/sprites/vampire/Vampires1_Idle_with_shadow.png" id="2_2bgg0"]
+[ext_resource type="Texture2D" uid="uid://ddilvj8gqnevg" path="res://entities/sprites/vampire/vampire_idle.png" id="2_2bgg0"]
 
 [sub_resource type="Animation" id="Animation_jiais"]
 length = 0.001
