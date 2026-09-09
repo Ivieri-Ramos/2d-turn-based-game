@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d11oj7ydgcd5s"]
 
 [ext_resource type="PackedScene" uid="uid://2spevtkkfb85" path="res://entities/overworld/overworld_entity.tscn" id="1_npuef"]
-[ext_resource type="Texture2D" uid="uid://crkrjqrqtr1n7" path="res://entities/sprites/blue_slime/Slime2_Idle_with_shadow.png" id="2_h3uwm"]
+[ext_resource type="Texture2D" uid="uid://bjcgxfv61lm1q" path="res://entities/sprites/blue_slime/blueslime_idle.png" id="2_h3uwm"]
 
 [sub_resource type="Animation" id="Animation_ycwp5"]
 length = 0.001
