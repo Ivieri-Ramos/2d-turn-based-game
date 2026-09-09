@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://f16sgbupuxrl"]
 
 [ext_resource type="PackedScene" uid="uid://c3pakqn0fi27j" path="res://entities/battle/battle_entity.tscn" id="1_c354w"]
-[ext_resource type="Texture2D" path="res://entities/sprites/green_slime/Slime1_Attack_with_shadow.png" id="2_2bupe"]
-[ext_resource type="Texture2D" path="res://entities/sprites/green_slime/Slime1_Death_with_shadow.png" id="3_5p7au"]
-[ext_resource type="Texture2D" path="res://entities/sprites/green_slime/Slime1_Hurt_with_shadow.png" id="4_jfs5j"]
+[ext_resource type="Texture2D" uid="uid://dd4okidtmf4h4" path="res://entities/sprites/green_slime/greenslime_attack.png" id="2_2bupe"]
+[ext_resource type="Texture2D" uid="uid://oq6jc8bptwyx" path="res://entities/sprites/green_slime/greenslime_death.png" id="3_5p7au"]
+[ext_resource type="Texture2D" uid="uid://cuw452fpupoq6" path="res://entities/sprites/green_slime/greenslime_hurt.png" id="4_jfs5j"]
 [ext_resource type="Texture2D" uid="uid://3s2to56owrsr" path="res://entities/sprites/green_slime/greenslime_idle.png" id="5_5p7au"]
 [ext_resource type="Texture2D" uid="uid://cx3f856wo5lt" path="res://entities/sprites/green_slime/greenslime_walk.png" id="6_jfs5j"]
 

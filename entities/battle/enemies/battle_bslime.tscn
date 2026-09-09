@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://jkdyvdd8nlrt"]
 
 [ext_resource type="PackedScene" uid="uid://c3pakqn0fi27j" path="res://entities/battle/battle_entity.tscn" id="1_tiitk"]
-[ext_resource type="Texture2D" path="res://entities/sprites/blue_slime/Slime2_Attack_with_shadow.png" id="2_8ak7b"]
+[ext_resource type="Texture2D" uid="uid://deks1mbbp6rb7" path="res://entities/sprites/blue_slime/blueslime_attack.png" id="2_8ak7b"]
 [ext_resource type="Script" uid="uid://dxyxtr6305pyv" path="res://entities/battle/battle_entity.gd" id="3_fban2"]
-[ext_resource type="Texture2D" path="res://entities/sprites/blue_slime/Slime2_Idle_with_shadow.png" id="3_updwj"]
-[ext_resource type="Texture2D" path="res://entities/sprites/blue_slime/Slime2_Death_with_shadow.png" id="3_wh47v"]
-[ext_resource type="Texture2D" path="res://entities/sprites/blue_slime/Slime2_Hurt_with_shadow.png" id="4_g6yof"]
+[ext_resource type="Texture2D" uid="uid://bjcgxfv61lm1q" path="res://entities/sprites/blue_slime/blueslime_idle.png" id="3_updwj"]
+[ext_resource type="Texture2D" uid="uid://b32ado2mubqp2" path="res://entities/sprites/blue_slime/blueslime_death.png" id="3_wh47v"]
+[ext_resource type="Texture2D" uid="uid://fnlwpg8a8h52" path="res://entities/sprites/blue_slime/blueslime_hurt.png" id="4_g6yof"]
 [ext_resource type="Texture2D" uid="uid://c65urst44e2nu" path="res://entities/sprites/blue_slime/blueslime_walk.png" id="7_7k3u7"]
 
 [sub_resource type="Animation" id="Animation_updwj"]

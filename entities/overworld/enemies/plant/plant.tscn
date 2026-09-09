@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://babfq11pgaq1w"]
 
 [ext_resource type="PackedScene" uid="uid://2spevtkkfb85" path="res://entities/overworld/overworld_entity.tscn" id="1_mmwyu"]
-[ext_resource type="Texture2D" uid="uid://cd7ac8ddftdur" path="res://entities/sprites/plant/Plant1_Idle_with_shadow.png" id="2_2ogf3"]
+[ext_resource type="Texture2D" uid="uid://cximaqqgimsje" path="res://entities/sprites/plant/plant_idle.png" id="2_2ogf3"]
 
 [sub_resource type="Animation" id="Animation_urk1i"]
 length = 0.001

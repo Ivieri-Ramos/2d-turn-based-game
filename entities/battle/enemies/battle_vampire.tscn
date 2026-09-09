@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bmow1x5fvywgi"]
 
 [ext_resource type="PackedScene" uid="uid://c3pakqn0fi27j" path="res://entities/battle/battle_entity.tscn" id="1_xmy06"]
-[ext_resource type="Texture2D" path="res://entities/sprites/vampire/Vampires1_Idle_with_shadow.png" id="2_52owy"]
-[ext_resource type="Texture2D" path="res://entities/sprites/vampire/Vampires1_Death_with_shadow.png" id="2_lxdfe"]
-[ext_resource type="Texture2D" path="res://entities/sprites/vampire/Vampires1_Hurt_with_shadow.png" id="3_uxfrq"]
+[ext_resource type="Texture2D" uid="uid://ddilvj8gqnevg" path="res://entities/sprites/vampire/vampire_idle.png" id="2_52owy"]
+[ext_resource type="Texture2D" uid="uid://4jh3tn538lhn" path="res://entities/sprites/vampire/vampire_death.png" id="2_lxdfe"]
+[ext_resource type="Texture2D" uid="uid://5epvpreicr1s" path="res://entities/sprites/vampire/vampire_hurt.png" id="3_uxfrq"]
 [ext_resource type="Texture2D" uid="uid://tjkq1lnmi5ha" path="res://entities/sprites/vampire/vampire_walk.png" id="5_jt646"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xmy06"]
