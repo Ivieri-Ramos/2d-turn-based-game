@@ -425,6 +425,7 @@ texture = ExtResource("1_5ol85")
 14:6/0/terrains_peering_bit/top_left_corner = 0
 14:6/0/terrains_peering_bit/top_side = 0
 14:6/0/terrains_peering_bit/top_right_corner = 0
+5:8/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e1lpt"]
 resource_name = "objetos para cemiterio"

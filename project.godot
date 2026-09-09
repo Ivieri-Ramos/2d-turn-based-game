@@ -14,7 +14,10 @@ config/name="2d-turn-based-game"
 run/main_scene="uid://cmslk6rt6pe5t"
 config/features=PackedStringArray("4.7")
 config/icon="res://assets/icon.svg"
-<<<<<<<HEADrun/main_scene="uid://cmslk6rt6pe5t"
+
+[autoload]
+
+SceneTransition="*uid://beggxv4qsrxu4"
 
 [debug]
 
@@ -33,11 +36,6 @@ window/size/window_width_override=1280
 window/size/window_height_override=704
 window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
-
-[editor]
-
-version_control/plugin_name="GitPlugin"
-version_control/autoload_on_startup=true
 
 [editor_plugins]
 
