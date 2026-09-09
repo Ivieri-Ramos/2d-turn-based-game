@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dhnjiov0ec6up"]
 
 [ext_resource type="PackedScene" uid="uid://c3pakqn0fi27j" path="res://entities/battle/battle_entity.tscn" id="1_25r2x"]
-[ext_resource type="Texture2D" path="res://entities/sprites/orc/orc1_attack_with_shadow.png" id="2_ycfld"]
-[ext_resource type="Texture2D" path="res://entities/sprites/orc/orc1_death_with_shadow.png" id="3_pttao"]
+[ext_resource type="Texture2D" uid="uid://dol34f3rbrcs3" path="res://entities/sprites/orc/orc_attack.png" id="2_ycfld"]
+[ext_resource type="Texture2D" uid="uid://cmcdj2hi1cfs0" path="res://entities/sprites/orc/orc_death.png" id="3_pttao"]
 [ext_resource type="Texture2D" uid="uid://bky7h4pote8ew" path="res://entities/sprites/orc/orc_idle.png" id="3_ycfld"]
-[ext_resource type="Texture2D" path="res://entities/sprites/orc/orc1_hurt_with_shadow.png" id="4_16wg1"]
+[ext_resource type="Texture2D" uid="uid://8offdv6tikdc" path="res://entities/sprites/orc/orc_hurt.png" id="4_16wg1"]
 [ext_resource type="Texture2D" uid="uid://4oi73mtescdf" path="res://entities/sprites/orc/orc_run_attack.png" id="6_walrm"]
 [ext_resource type="Texture2D" uid="uid://bct6qfyuib6wo" path="res://entities/sprites/orc/orc_walk_attack.png" id="7_stox8"]
 
