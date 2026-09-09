@@ -9,3 +9,6 @@ tile_map_data = PackedByteArray("AAADAAIACwABAAYAAAADAAMACwABAAYAAAADAAQACwABAAY
 
 [node name="Floor2" parent="." index="1" unique_id=1493924509]
 tile_map_data = PackedByteArray("AAAIAAkACwAGAAcAAAAIAAoACwAGAAgAAAAJAAkACwAHAAcAAAAJAAoACwAHAAgAAAAKAAkACwAIAAcAAAAKAAoACwAIAAgAAAALAAkACwAJAAcAAAALAAoACwAJAAgAAAAKAAgACwADAAUAAAAJAAgACwAFAAUAAAA=")
+
+[node name="TransitionDown" parent="." index="7" unique_id=1868085152]
+cena_destino = "uid://3e4g6leq8kao"

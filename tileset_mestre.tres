@@ -12,10 +12,12 @@
 [ext_resource type="Texture2D" uid="uid://58wk68fpdc4j" path="res://assets/cenarios/tileset/walls, floors/TX Struct.png" id="10_emp3f"]
 [ext_resource type="Texture2D" uid="uid://ilqx1mj3afxc" path="res://assets/cenarios/tileset/walls, floors/TX Tileset Stone Ground.png" id="11_3k8pd"]
 [ext_resource type="PackedScene" uid="uid://b1l7555xj4c7m" path="res://scenes/overworld/objects/tree1.tscn" id="12_4oupw"]
+[ext_resource type="PackedScene" uid="uid://u5murn2pfj71" path="res://scenes/overworld/objects/stairs.tscn" id="12_gx3xy"]
 [ext_resource type="PackedScene" uid="uid://7mv21yp3n8ke" path="res://scenes/overworld/objects/pilar4.tscn" id="13_nehnu"]
 [ext_resource type="PackedScene" uid="uid://c4k3o25vrvjjj" path="res://scenes/overworld/objects/pilar0.tscn" id="14_iuior"]
 [ext_resource type="PackedScene" uid="uid://cgn54j8uchx26" path="res://scenes/overworld/objects/tree2.tscn" id="15_cj6gq"]
 [ext_resource type="PackedScene" uid="uid://css8roedkhtwk" path="res://scenes/overworld/objects/escombro.tscn" id="15_iuior"]
+[ext_resource type="PackedScene" uid="uid://d0tst2k8a2cri" path="res://scenes/overworld/objects/stairs2.tscn" id="16_egjoa"]
 [ext_resource type="PackedScene" uid="uid://mj3jj5qqfc2t" path="res://scenes/overworld/objects/tree3.tscn" id="16_i4ueh"]
 [ext_resource type="PackedScene" uid="uid://8vtyarlkdabt" path="res://scenes/overworld/objects/estatua.tscn" id="17_4vin2"]
 [ext_resource type="PackedScene" uid="uid://srwrr0luqf8h" path="res://scenes/overworld/objects/pedra.tscn" id="18_iuior"]
@@ -38,6 +40,7 @@
 [ext_resource type="PackedScene" uid="uid://beayv6bjmm5bq" path="res://scenes/overworld/objects/arvore_morta5.tscn" id="36_egjoa"]
 [ext_resource type="PackedScene" uid="uid://15vsfkudccl5" path="res://scenes/overworld/objects/arvore_morta.tscn" id="37_pp8xo"]
 [ext_resource type="PackedScene" uid="uid://djbdtu0uhqusy" path="res://scenes/overworld/objects/esqueleto_gigante.tscn" id="38_kr1ey"]
+[ext_resource type="PackedScene" uid="uid://bwdo2p843vbak" path="res://scenes/overworld/objects/pilar6.tscn" id="41_egjoa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gpy8b"]
 resource_name = "flores e matos "
@@ -1589,6 +1592,7 @@ texture_region_size = Vector2i(32, 32)
 12:3/0 = 0
 14:3/size_in_atlas = Vector2i(1, 2)
 14:3/0 = 0
+14:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 8:4/0 = 0
 8:3/0 = 0
 8:6/0 = 0
@@ -1857,6 +1861,9 @@ texture_region_size = Vector2i(32, 32)
 3:15/0 = 0
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_4oupw"]
+scenes/1/scene = ExtResource("12_gx3xy")
+scenes/7/scene = ExtResource("16_egjoa")
+scenes/8/scene = ExtResource("41_egjoa")
 scenes/17/scene = ExtResource("19_y011k")
 scenes/18/scene = ExtResource("20_klsbr")
 scenes/19/scene = ExtResource("21_abgin")
