@@ -8,11 +8,19 @@ class_name OverworldPlayer extends OverworldEntity
 
 @export var grid_movement: GridMovement = null
 
+@export var interactor: Interactor = null
+
 @export_group("StateChart References")
 
 @export var idle_state: AtomicState = null
 
 @export var move_state: AtomicState = null
+
+@export var interact_state: AtomicState = null
+
+@export_group("Attack")
+
+@export var attack_area: Area2D = null
 
 func _ready() -> void:
 	super._ready()
@@ -21,3 +29,5 @@ func _ready() -> void:
 	idle_state.state_processing.connect(input_handler._on_idle_state_processing)
 	
 	move_state.state_entered.connect(grid_movement._on_move_state_entered)
+	
+	interact_state.state_entered.connect(interactor._on_interact_state_entered)

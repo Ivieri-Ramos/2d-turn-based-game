@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://2spevtkkfb85" path="res://entities/overworld/overworld_entity.tscn" id="1_on8du"]
 [ext_resource type="Texture2D" uid="uid://jw3qx1s2fqsd" path="res://entities/sprites/player/player_idle.png" id="2_18xl7"]
 [ext_resource type="Script" uid="uid://tgd3yegr5yps" path="res://entities/overworld/player/overworld_player.gd" id="2_x816k"]
+[ext_resource type="Resource" uid="uid://b25auskbyx8or" path="res://data/player/player_stats.tres" id="3_1ct7p"]
 [ext_resource type="Texture2D" uid="uid://e1yl3ufmkclq" path="res://entities/sprites/player/player_walk.png" id="4_36n0l"]
 [ext_resource type="Script" uid="uid://couw105c3bde4" path="res://addons/godot_state_charts/state_chart.gd" id="4_sy4wb"]
 [ext_resource type="Script" uid="uid://jk2jm1g6q853" path="res://addons/godot_state_charts/compound_state.gd" id="5_ja5d5"]
@@ -10,6 +11,7 @@
 [ext_resource type="Script" uid="uid://cf1nsco3w0mf6" path="res://addons/godot_state_charts/transition.gd" id="7_3blbh"]
 [ext_resource type="Script" uid="uid://d240onmybus7b" path="res://entities/components/input_handler.gd" id="9_wylro"]
 [ext_resource type="Script" uid="uid://rwnu7f88bg13" path="res://entities/components/grid_movement.gd" id="10_xg41x"]
+[ext_resource type="Script" uid="uid://dcjeh5o5ahlc8" path="res://entities/components/interactor.gd" id="11_oehq2"]
 
 [sub_resource type="Animation" id="Animation_b6tm4"]
 length = 0.001
@@ -503,13 +505,21 @@ _data = {
 &"move_up": SubResource("Animation_12lbx")
 }
 
-[node name="OverworldPlayer" unique_id=1679493519 node_paths=PackedStringArray("input_handler", "grid_movement", "idle_state", "move_state") instance=ExtResource("1_on8du")]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2p0ph"]
+size = Vector2(32, 32)
+
+[node name="OverworldPlayer" unique_id=1679493519 node_paths=PackedStringArray("input_handler", "grid_movement", "interactor", "idle_state", "move_state", "interact_state", "attack_area") instance=ExtResource("1_on8du")]
 collision_layer = 2
+collision_mask = 5
 script = ExtResource("2_x816k")
 input_handler = NodePath("Components/InputHandler")
 grid_movement = NodePath("Components/GridMovement")
+interactor = NodePath("Components/Interactor")
 idle_state = NodePath("StateChart/Root/Idle")
 move_state = NodePath("StateChart/Root/Move")
+interact_state = NodePath("StateChart/Root/Interact")
+attack_area = NodePath("AttackArea")
+battle_stats = ExtResource("3_1ct7p")
 
 [node name="Sprite2D" parent="." index="1" unique_id=1463598789]
 texture = ExtResource("2_18xl7")
@@ -519,6 +529,10 @@ vframes = 4
 
 [node name="AnimationPlayer" parent="." index="2" unique_id=1751302042]
 libraries/ = SubResource("AnimationLibrary_b6tm4")
+
+[node name="RayCast2D" parent="." index="3" unique_id=1992704830]
+collision_mask = 5
+collide_with_areas = true
 
 [node name="StateChart" type="Node" parent="." index="4" unique_id=1565556467]
 script = ExtResource("4_sy4wb")
@@ -579,5 +593,16 @@ metadata/_custom_type_script = "uid://d240onmybus7b"
 script = ExtResource("10_xg41x")
 metadata/_custom_type_script = "uid://rwnu7f88bg13"
 
-[connection signal="state_physics_processing" from="StateChart/Root/Idle" to="." method="_on_idle_state_physics_processing"]
-[connection signal="state_entered" from="StateChart/Root/Move" to="." method="_on_move_state_entered"]
+[node name="Interactor" type="Node" parent="Components" index="2" unique_id=292595763]
+script = ExtResource("11_oehq2")
+metadata/_custom_type_script = "uid://dcjeh5o5ahlc8"
+
+[node name="AttackArea" type="Area2D" parent="." index="6" unique_id=664706270]
+visible = false
+position = Vector2(0, 32)
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" index="0" unique_id=737234141]
+shape = SubResource("RectangleShape2D_2p0ph")
+disabled = true

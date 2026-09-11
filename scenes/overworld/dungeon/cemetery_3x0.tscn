@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://iranvc4yyg42"]
 
-[ext_resource type="PackedScene" uid="uid://b436jkoyf6ueh" path="res://scenes/overworld/mapa_base.tscn" id="1_aw8hc"]
+[ext_resource type="PackedScene" uid="uid://b436jkoyf6ueh" path="res://scenes/overworld/base_map.tscn" id="1_aw8hc"]
 
 [node name="MapaBase" unique_id=763982599 instance=ExtResource("1_aw8hc")]
 
@@ -13,9 +13,3 @@ tile_map_data = PackedByteArray("AAAAAAAACwABAAAAAAAAAAEACwABAAEAAAAAAAIACwABAAI
 [node name="Floor3" parent="." index="2" unique_id=1202287456]
 z_index = 2
 tile_map_data = PackedByteArray("AAARAAUAAwALAAMAAAARAAcAAwARAAEAAAAPAAYAAwATAAEAAAAOAAUAAwAHAAUAAAA=")
-
-[node name="TransitionUp" parent="." index="5" unique_id=1200992474]
-cena_destino = "uid://bgneycroihflb"
-
-[node name="TransitionLeft" parent="." index="6" unique_id=54653831]
-cena_destino = "uid://1pr38ug3a5jv"

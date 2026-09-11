@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d4dbawqvk7crt"]
+
+[sub_resource type="TileSet" id="TileSet_tfvf8"]
+
+[node name="Base" type="Node2D" unique_id=275309991]
+
+[node name="Chao" type="TileMapLayer" parent="." unique_id=2011031925]
+tile_set = SubResource("TileSet_tfvf8")
+
+[node name="Parede" type="TileMapLayer" parent="." unique_id=301604654]

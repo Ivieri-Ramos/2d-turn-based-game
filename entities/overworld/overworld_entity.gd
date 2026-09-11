@@ -1,6 +1,6 @@
 class_name OverworldEntity extends Area2D
 
-#@export var stats: EntityStats = null
+@export var battle_stats: EntityData = null
 
 @export var direction: GameEnums.Direction = GameEnums.Direction.DOWN
 

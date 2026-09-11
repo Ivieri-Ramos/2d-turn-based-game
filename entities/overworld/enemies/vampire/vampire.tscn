@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://2spevtkkfb85" path="res://entities/overworld/overworld_entity.tscn" id="1_672vb"]
 [ext_resource type="Texture2D" uid="uid://ddilvj8gqnevg" path="res://entities/sprites/vampire/vampire_idle.png" id="2_2bgg0"]
+[ext_resource type="Resource" uid="uid://bvnmt4tytwjyg" path="res://data/enemy/orc_data.tres" id="2_n0cyq"]
 
 [sub_resource type="Animation" id="Animation_jiais"]
 length = 0.001
@@ -219,7 +220,9 @@ _data = {
 &"idle_up": SubResource("Animation_y5oa5")
 }
 
-[node name="OverworldEntity" unique_id=1679493519 instance=ExtResource("1_672vb")]
+[node name="OverworldVampire" unique_id=1679493519 instance=ExtResource("1_672vb")]
+collision_layer = 4
+battle_stats = ExtResource("2_n0cyq")
 
 [node name="Sprite2D" parent="." index="1" unique_id=1463598789]
 position = Vector2(1, -3)

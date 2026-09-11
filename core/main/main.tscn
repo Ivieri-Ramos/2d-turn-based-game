@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://bn3eolnlvpsg8"]
+
+[ext_resource type="Script" uid="uid://c8t227io2eckk" path="res://core/main/main.gd" id="1_5alkf"]
+[ext_resource type="Script" uid="uid://couw105c3bde4" path="res://addons/godot_state_charts/state_chart.gd" id="1_8fcwd"]
+[ext_resource type="Script" uid="uid://cytafq8i1y8qm" path="res://addons/godot_state_charts/atomic_state.gd" id="2_6vymn"]
+[ext_resource type="Script" uid="uid://jk2jm1g6q853" path="res://addons/godot_state_charts/compound_state.gd" id="2_vwfi5"]
+[ext_resource type="Script" uid="uid://b4dwolbvt8our" path="res://addons/godot_state_charts/history_state.gd" id="4_yibi5"]
+[ext_resource type="Script" uid="uid://cf1nsco3w0mf6" path="res://addons/godot_state_charts/transition.gd" id="5_k5wvu"]
+[ext_resource type="PackedScene" uid="uid://2jfnyeqefir0" path="res://core/world/world.tscn" id="7_5alkf"]
+[ext_resource type="PackedScene" uid="uid://besxdq266g023" path="res://ui/menu/ui.tscn" id="7_qctb3"]
+[ext_resource type="PackedScene" uid="uid://bynenhc27e0ml" path="res://ui/battle/battle.tscn" id="9_vxc0a"]
+
+[node name="Main" type="Node" unique_id=1669063658 node_paths=PackedStringArray("main_menu_state", "playing_state", "exploring_state", "battling_state", "state_chart", "ui", "world")]
+script = ExtResource("1_5alkf")
+main_menu_state = NodePath("StateChart/Root/MainMenu")
+playing_state = NodePath("StateChart/Root/Playing")
+exploring_state = NodePath("StateChart/Root/Playing/Exploring")
+battling_state = NodePath("StateChart/Root/Playing/Battling")
+state_chart = NodePath("StateChart")
+ui = NodePath("UI")
+world = NodePath("World")
+battle_scene = ExtResource("9_vxc0a")
+
+[node name="StateChart" type="Node" parent="." unique_id=1340791866]
+script = ExtResource("1_8fcwd")
+metadata/_custom_type_script = "uid://couw105c3bde4"
+
+[node name="Root" type="Node" parent="StateChart" unique_id=618482993]
+script = ExtResource("2_vwfi5")
+initial_state = NodePath("MainMenu")
+metadata/_custom_type_script = "uid://jk2jm1g6q853"
+
+[node name="Playing" type="Node" parent="StateChart/Root" unique_id=1238073554]
+script = ExtResource("2_vwfi5")
+initial_state = NodePath("Exploring")
+metadata/_custom_type_script = "uid://jk2jm1g6q853"
+
+[node name="Exploring" type="Node" parent="StateChart/Root/Playing" unique_id=965828305]
+script = ExtResource("2_6vymn")
+
+[node name="ToBattle" type="Node" parent="StateChart/Root/Playing/Exploring" unique_id=733867494]
+script = ExtResource("5_k5wvu")
+to = NodePath("../../Battling")
+event = &"start_battle"
+delay_in_seconds = "0.0"
+
+[node name="ToPause" type="Node" parent="StateChart/Root/Playing/Exploring" unique_id=1405731261]
+script = ExtResource("5_k5wvu")
+to = NodePath("../../Paused")
+event = &"start_pause"
+delay_in_seconds = "0.0"
+
+[node name="Battling" type="Node" parent="StateChart/Root/Playing" unique_id=1690838923]
+script = ExtResource("2_6vymn")
+
+[node name="ToExplore" type="Node" parent="StateChart/Root/Playing/Battling" unique_id=1194405158]
+script = ExtResource("5_k5wvu")
+to = NodePath("../../Exploring")
+event = &"start_explore"
+delay_in_seconds = "0.0"
+
+[node name="ToPause" type="Node" parent="StateChart/Root/Playing/Battling" unique_id=181594337]
+script = ExtResource("5_k5wvu")
+to = NodePath("../../Paused")
+event = &"start_pause"
+delay_in_seconds = "0.0"
+
+[node name="Historic" type="Node" parent="StateChart/Root/Playing" unique_id=1726430460]
+script = ExtResource("4_yibi5")
+default_state = NodePath("../Exploring")
+
+[node name="Paused" type="Node" parent="StateChart/Root/Playing" unique_id=1417737602]
+script = ExtResource("2_6vymn")
+metadata/_custom_type_script = "uid://cytafq8i1y8qm"
+
+[node name="MainMenu" type="Node" parent="StateChart/Root" unique_id=696713254]
+script = ExtResource("2_6vymn")
+metadata/_custom_type_script = "uid://cytafq8i1y8qm"
+
+[node name="ToPlay" type="Node" parent="StateChart/Root/MainMenu" unique_id=1828652047]
+script = ExtResource("5_k5wvu")
+to = NodePath("../../Playing")
+event = &"start_game"
+delay_in_seconds = "0.0"
+
+[node name="World" parent="." unique_id=26790859 instance=ExtResource("7_5alkf")]
+
+[node name="UI" parent="." unique_id=570545457 instance=ExtResource("7_qctb3")]

@@ -8,7 +8,11 @@ func _on_idle_state_entered() -> void:
 func _on_idle_state_processing(_delta: float) -> void:
 	var new_direction: GameEnums.Direction = entity.direction
 	var try_move: bool = false
-
+	
+	if Input.is_action_just_pressed(&"interact"):
+		entity.state_chart.send_event(&"start_interact")
+		return
+	
 	if Input.is_action_pressed(&"move_up"):
 		try_move = true
 		new_direction = GameEnums.Direction.UP

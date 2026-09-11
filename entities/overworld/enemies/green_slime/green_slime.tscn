@@ -1,9 +1,7 @@
 [gd_scene format=3 uid="uid://b2ioxy4py7ic"]
 
 [ext_resource type="PackedScene" uid="uid://2spevtkkfb85" path="res://entities/overworld/overworld_entity.tscn" id="1_4o2dw"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_krc72"]
-load_path = "res://.godot/imported/Slime1_Idle_with_shadow.png-6fd237cf2019a51a9b548a3e572c8280.ctex"
+[ext_resource type="Texture2D" uid="uid://3s2to56owrsr" path="res://entities/sprites/green_slime/greenslime_idle.png" id="2_derwf"]
 
 [sub_resource type="Animation" id="Animation_v43kk"]
 length = 0.001
@@ -149,10 +147,10 @@ _data = {
 &"idle_up": SubResource("Animation_2e3k4")
 }
 
-[node name="OverworldEntity" unique_id=1679493519 instance=ExtResource("1_4o2dw")]
+[node name="OverworldGreenSlime" unique_id=1679493519 instance=ExtResource("1_4o2dw")]
 
 [node name="Sprite2D" parent="." index="1" unique_id=1463598789]
-texture = SubResource("CompressedTexture2D_krc72")
+texture = ExtResource("2_derwf")
 offset = Vector2(0, -9)
 hframes = 6
 vframes = 4

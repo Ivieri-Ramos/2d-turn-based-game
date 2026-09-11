@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://cb3yho1afbggj"]
 
-[ext_resource type="PackedScene" uid="uid://2spevtkkfb85" path="res://entities/overworld/overworld_entity.tscn" id="1_nau6h"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tg75i"]
-load_path = "res://.godot/imported/orc1_idle_with_shadow.png-09e0f07b8e38c41e2899728887351dae.ctex"
+[ext_resource type="PackedScene" uid="uid://xi6la5ayi6sc" path="res://entities/overworld/enemies/overworld_enemy.tscn" id="1_nau6h"]
+[ext_resource type="Resource" uid="uid://bvnmt4tytwjyg" path="res://data/enemy/orc_data.tres" id="2_5veid"]
+[ext_resource type="Texture2D" uid="uid://bky7h4pote8ew" path="res://entities/sprites/orc/orc_idle.png" id="2_iyqi3"]
 
 [sub_resource type="Animation" id="Animation_jiais"]
 length = 0.001
@@ -221,10 +220,11 @@ _data = {
 &"idle_up": SubResource("Animation_y5oa5")
 }
 
-[node name="OverworldEntity" unique_id=1679493519 instance=ExtResource("1_nau6h")]
+[node name="OverworldOrc" unique_id=1679493519 instance=ExtResource("1_nau6h")]
+battle_stats = ExtResource("2_5veid")
 
 [node name="Sprite2D" parent="." index="1" unique_id=1463598789]
-texture = SubResource("CompressedTexture2D_tg75i")
+texture = ExtResource("2_iyqi3")
 offset = Vector2(0, -10)
 hframes = 4
 vframes = 4

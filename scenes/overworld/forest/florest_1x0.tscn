@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://3e4g6leq8kao"]
 
-[ext_resource type="PackedScene" uid="uid://b436jkoyf6ueh" path="res://scenes/overworld/mapa_base.tscn" id="1_5rnty"]
+[ext_resource type="PackedScene" uid="uid://ctushntgafsex" path="res://scenes/overworld/mapa_base.tscn" id="1_5rnty"]
 
 [node name="MapaBase" unique_id=763982599 instance=ExtResource("1_5rnty")]
 
@@ -16,10 +16,10 @@ tile_map_data = PackedByteArray("AAACAAQABAACABoAAAACAAUABAAAABoAAAACAAgABAAGAAw
 [node name="Floor4" parent="." index="3" unique_id=70923335]
 tile_map_data = PackedByteArray("AAAAAAAADwABAAMAAAAAAAEADwABAAQAAAABAAAADwAGAAYAAAABAAEADwAGAAcAAAACAAAADwADAAYAAAACAAEADwADAAcAAAADAAAADwAGAAYAAAADAAEADwAGAAcAAAAEAAAADwABAAYAAAAEAAEADwABAAcAAAAFAAAADwAGAAYAAAAFAAEADwAGAAcAAAAGAAAADwADAAYAAAAGAAEADwADAAcAAAAHAAAADwAGAAYAAAAHAAEADwAGAAcAAAAIAAAADwADAAMAAAAIAAEADwADAAQAAAALAAAADwABAAMAAAALAAEADwABAAQAAAAMAAAADwAGAAYAAAAMAAEADwAGAAcAAAANAAAADwADAAYAAAANAAEADwADAAcAAAAOAAAADwAGAAYAAAAOAAEADwAGAAcAAAAPAAAADwABAAYAAAAPAAEADwABAAcAAAAQAAAADwAGAAYAAAAQAAEADwAGAAcAAAARAAAADwADAAYAAAARAAEADwADAAcAAAASAAAADwAGAAYAAAASAAEADwAGAAcAAAATAAAADwADAAMAAAATAAEADwADAAQAAAA=")
 
-[node name="TransitionUp" parent="." index="5" unique_id=1200992474]
+[node name="TransitionUp" parent="." index="6" unique_id=1200992474]
 cena_destino = "uid://dxqgoe4wjqs38"
 
-[node name="TransitionLeft" parent="." index="6" unique_id=54653831]
+[node name="TransitionLeft" parent="." index="7" unique_id=54653831]
 cena_destino = "uid://orp25m22v7ox"
 
 [node name="TransitionRight" parent="." index="8" unique_id=458630561]
