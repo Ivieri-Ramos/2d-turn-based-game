@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://7mv21yp3n8ke"]
+
+[ext_resource type="PackedScene" uid="uid://badujfh3p1orp" path="res://src/world/objects/base_object.tscn" id="1_vh3rt"]
+[ext_resource type="Texture2D" uid="uid://b1sks46onck33" path="res://assets/tilesets/textures/walls_floors/TX Props with Shadow.png" id="2_w2igt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1anvx"]
+size = Vector2(32, 32)
+
+[node name="Pilar" unique_id=240086847 instance=ExtResource("1_vh3rt")]
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=263958606]
+shape = SubResource("RectangleShape2D_1anvx")
+
+[node name="Sprite2D" parent="." index="1" unique_id=4157266]
+position = Vector2(8, 0)
+texture = ExtResource("2_w2igt")
+offset = Vector2(-2, -40)
+region_enabled = true
+region_rect = Rect2(224, 64, 44, 96)

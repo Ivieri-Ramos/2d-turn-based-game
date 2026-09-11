@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cuqr2h7uuqg7v"]
+
+[ext_resource type="PackedScene" uid="uid://badujfh3p1orp" path="res://src/world/objects/base_object.tscn" id="1_wqbvk"]
+[ext_resource type="Texture2D" uid="uid://b1sks46onck33" path="res://assets/tilesets/textures/walls_floors/TX Props with Shadow.png" id="2_7h5ik"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7h5ik"]
+size = Vector2(32, 32)
+
+[node name="BaseObject" unique_id=240086847 instance=ExtResource("1_wqbvk")]
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=263958606]
+shape = SubResource("RectangleShape2D_7h5ik")
+
+[node name="Sprite2D" parent="." index="1" unique_id=4157266]
+texture = ExtResource("2_7h5ik")
+offset = Vector2(16, -20)
+region_enabled = true
+region_rect = Rect2(224, 224, 64, 64)

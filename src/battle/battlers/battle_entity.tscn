@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c3pakqn0fi27j"]
+
+[ext_resource type="Script" uid="uid://dxyxtr6305pyv" path="res://src/battle/battlers/battle_entity.gd" id="1_tt52w"]
+
+[node name="BattleEntity" type="Node2D" unique_id=1828504817]
+script = ExtResource("1_tt52w")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=291602556]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=366732846]

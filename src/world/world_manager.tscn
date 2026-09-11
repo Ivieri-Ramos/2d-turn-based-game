@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://2jfnyeqefir0"]
+
+[ext_resource type="Script" uid="uid://4q278it76out" path="res://src/world/world_manager.gd" id="1_wavff"]
+[ext_resource type="PackedScene" uid="uid://orp25m22v7ox" path="res://src/world/maps/forest/forest_0x0.tscn" id="2_xq38f"]
+[ext_resource type="PackedScene" uid="uid://cmslk6rt6pe5t" path="res://src/entities/player/overworld_player.tscn" id="3_p6pjc"]
+
+[node name="World" type="Node2D" unique_id=26790859]
+script = ExtResource("1_wavff")
+initial_map = ExtResource("2_xq38f")
+initial_position = Vector2(336, 176)
+overworld_player = ExtResource("3_p6pjc")
+
+[node name="MapContainer" type="Node2D" parent="." unique_id=1876170130]
+
+[node name="EntitiesContainer" type="Node2D" parent="." unique_id=1502097375]
