@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://fnajpc03j7sh"]
 
 [ext_resource type="PackedScene" uid="uid://c3pakqn0fi27j" path="res://entities/battle/battle_entity.tscn" id="1_d4tj4"]
-[ext_resource type="Texture2D" uid="uid://cxg27wemtty56" path="res://entities/sprites/plant/plant_attack.png" id="2_uwpur"]
-[ext_resource type="Texture2D" uid="uid://cximaqqgimsje" path="res://entities/sprites/plant/plant_idle.png" id="3_37jej"]
+[ext_resource type="Texture2D" path="res://entities/sprites/plant/Plant1_Attack_with_shadow.png" id="2_uwpur"]
+[ext_resource type="Texture2D" path="res://entities/sprites/plant/Plant1_Idle_with_shadow.png" id="3_37jej"]
 [ext_resource type="Texture2D" uid="uid://bg0jx85i0lcw2" path="res://entities/sprites/plant/plant_death.png" id="3_royst"]
 [ext_resource type="Texture2D" uid="uid://b0hsdrpm2tmw2" path="res://entities/sprites/plant/plant_hurt.png" id="4_d2cwo"]
 [ext_resource type="Texture2D" uid="uid://cndmlxkdcl532" path="res://entities/sprites/plant/plant_walk.png" id="6_d2cwo"]
