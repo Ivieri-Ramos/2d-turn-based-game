@@ -1,4 +1,4 @@
-extends Control
+class_name MainMenu extends Control
 
 signal new_game
 signal exit_game
