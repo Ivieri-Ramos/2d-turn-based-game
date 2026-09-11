@@ -16,3 +16,5 @@ func _on_move_state_entered() -> void:
 
 func _on_move_state_finished() -> void:
 	entity.state_chart.send_event(&"stop_move")
+	
+	EventBus.stop_movement.emit()

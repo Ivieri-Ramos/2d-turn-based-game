@@ -219,7 +219,7 @@ _data = {
 &"idle_up": SubResource("Animation_nx7mx")
 }
 
-[node name="OverworldEntity" unique_id=1679493519 instance=ExtResource("1_npuef")]
+[node name="OverworldBlueSlime" unique_id=1679493519 instance=ExtResource("1_npuef")]
 
 [node name="Sprite2D" parent="." index="1" unique_id=1463598789]
 position = Vector2(0, 14)

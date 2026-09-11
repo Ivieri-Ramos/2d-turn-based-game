@@ -6,6 +6,7 @@
 size = Vector2(32, 32)
 
 [node name="OverworldEntity" type="Area2D" unique_id=1679493519]
+y_sort_enabled = true
 script = ExtResource("1_w080f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=961837450]

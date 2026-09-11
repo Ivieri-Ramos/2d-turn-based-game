@@ -219,7 +219,7 @@ _data = {
 &"idle_up": SubResource("Animation_34vut")
 }
 
-[node name="OverworldEntity" unique_id=1679493519 instance=ExtResource("1_mmwyu")]
+[node name="OverworldPlant" unique_id=1679493519 instance=ExtResource("1_mmwyu")]
 
 [node name="Sprite2D" parent="." index="1" unique_id=1463598789]
 scale = Vector2(0.4508928, 0.5844726)
