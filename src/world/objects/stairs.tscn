@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://u5murn2pfj71"]
+
+[ext_resource type="PackedScene" uid="uid://badujfh3p1orp" path="res://src/world/objects/base_object.tscn" id="1_f5bae"]
+[ext_resource type="Texture2D" uid="uid://bgmq6agkwot4q" path="res://assets/tilesets/textures/decorative_objects/Objects.png" id="2_vrtpy"]
+
+[node name="BaseObject" unique_id=240086847 instance=ExtResource("1_f5bae")]
+
+[node name="Sprite2D" parent="." index="1" unique_id=4157266]
+texture = ExtResource("2_vrtpy")
+offset = Vector2(0, -40)
+region_enabled = true
+region_rect = Rect2(256, 64, 32, 96)

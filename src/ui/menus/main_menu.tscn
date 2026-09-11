@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://cfrhxn6ocugcr"]
+
+[ext_resource type="SpriteFrames" uid="uid://btirqfirsqtn1" path="res://src/ui/menus/new_sprite_frames.tres" id="1_gvx18"]
+[ext_resource type="Script" uid="uid://bagkkr7ssvk0v" path="res://src/ui/menus/main_menu.gd" id="1_h6nq7"]
+[ext_resource type="PackedScene" uid="uid://c640p8mnuhsib" path="res://src/ui/menus/about_menu.tscn" id="3_4gkdq"]
+[ext_resource type="PackedScene" uid="uid://bg1qcjyt16skk" path="res://src/ui/menus/start_menu.tscn" id="4_4gkdq"]
+
+[node name="MainMenu" type="Control" unique_id=1129315934]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h6nq7")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=779431742]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1553206924]
+disable_3d = true
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(640, 352)
+render_target_update_mode = 4
+
+[node name="BackgroundAnimado" type="AnimatedSprite2D" parent="SubViewportContainer/SubViewport" unique_id=329768380]
+position = Vector2(320, 176)
+sprite_frames = ExtResource("1_gvx18")
+autoplay = "default"
+frame_progress = 0.79284567
+speed_scale = 1.5
+
+[node name="UILayer" type="Control" parent="." unique_id=1203331664]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AboutMenu" parent="UILayer" unique_id=1886463338 instance=ExtResource("3_4gkdq")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="StartMenu" parent="UILayer" unique_id=47791058 instance=ExtResource("4_4gkdq")]
+unique_name_in_owner = true
+layout_mode = 1

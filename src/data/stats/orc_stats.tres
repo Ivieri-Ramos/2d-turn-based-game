@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://bvnmt4tytwjyg"]
+
+[ext_resource type="PackedScene" uid="uid://dhnjiov0ec6up" path="res://src/battle/battlers/enemies/battle_orc.tscn" id="1_g1v26"]
+[ext_resource type="Script" uid="uid://c0xhtpagrjv0v" path="res://src/data/models/enemy_data.gd" id="1_j67a1"]
+
+[resource]
+script = ExtResource("1_j67a1")
+monster_name = &"Orc"
+battle_scene = ExtResource("1_g1v26")
+max_life = 50
+attack_points = 10
+defense_points = 5
+metadata/_custom_type_script = "uid://c0xhtpagrjv0v"

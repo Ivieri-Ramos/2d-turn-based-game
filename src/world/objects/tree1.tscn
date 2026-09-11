@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b1l7555xj4c7m"]
+
+[ext_resource type="PackedScene" uid="uid://badujfh3p1orp" path="res://src/world/objects/base_object.tscn" id="1_awldi"]
+[ext_resource type="Texture2D" uid="uid://18gq6plx7wpd" path="res://assets/tilesets/textures/decorative_objects/TX Plant with Shadow.png" id="2_4hunv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_53ywn"]
+size = Vector2(32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4hunv"]
+atlas = ExtResource("2_4hunv")
+region = Rect2(0, 0, 160, 160)
+
+[node name="Tree" unique_id=240086847 instance=ExtResource("1_awldi")]
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=263958606]
+shape = SubResource("RectangleShape2D_53ywn")
+
+[node name="Sprite2D" parent="." index="1" unique_id=4157266]
+texture = SubResource("AtlasTexture_4hunv")
+offset = Vector2(0, -70)

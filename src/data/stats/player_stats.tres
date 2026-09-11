@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EntityData" format=3 uid="uid://b25auskbyx8or"]
+
+[ext_resource type="PackedScene" uid="uid://dfrsp6gw146j1" path="res://src/battle/battlers/player/battle_player.tscn" id="1_6fcl3"]
+[ext_resource type="Script" uid="uid://cmglui38vf6p1" path="res://src/data/models/entity_data.gd" id="1_o1dyv"]
+
+[resource]
+script = ExtResource("1_o1dyv")
+monster_name = &"Jogador"
+battle_scene = ExtResource("1_6fcl3")
+max_life = 100
+attack_points = 15
+defense_points = 20
+metadata/_custom_type_script = "uid://cmglui38vf6p1"
